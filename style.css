@@ -1,0 +1,144 @@
+:root {
+    --cfont: 16px;
+    --fontfam: sans-serif;
+    --textmar: 40px;
+    --hoverColor: #b60000;
+    --buttonSize:24px;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.project {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#project1 {
+    display: block;  /* Show the first project */
+}
+
+body {
+    background-color: white;
+    position: relative;
+    margin: var(--textmar);
+    padding: 0px;
+    overflow: hidden;
+    /* justify-content: center; */
+}
+
+ul li a:hover {
+    color: var(--hoverColor);
+}
+/* Your existing styles */
+ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--fontfam);
+    color: #000000;
+    padding: 10px 20px; /* updated padding */
+    transition: color 0.4s;
+}
+
+h1 {
+    font-size: var(--cfont);
+    font-family: var(--fontfam);
+    color: #000000;
+    padding: 10px 20px;
+    font-weight: normal;
+    text-align: center
+}
+
+/* List items displayed horizontally */
+ul li {
+    display: inline;
+}
+
+/* Center the navbar */
+nav {
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff; /* adding a background color to ensure the content below doesn't show through */
+    z-index: 100; /* ensures the navbar stays above other content */
+}
+
+body {
+    padding-top: 60px; /* Adjust this value to match the height of your navbar */
+}
+
+.common {
+    font-family: var(--fontfam);
+    font-size: var(--cfont);
+    width: calc(100% - 300px);
+    line-height: 1.5em;
+}
+.wavy-underline {
+    text-decoration: none; /* Remove default underline */
+    display: inline-block; /* Allows the background to work as expected */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M 0 10 Q 5 0 10 10" fill="transparent" stroke="red" stroke-width="1.5"/></svg>');
+    background-repeat: repeat-x;
+    background-position: 0% 100%; /* Position at the bottom of the text */
+    background-size: 5px 5px; /* Adjust size as needed */
+    padding-bottom: 2px; /* Create space for the wavy underline */
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+video, iframe {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 100%; /* This ensures the video doesn't overflow its container */
+    max-height: 80%; /* Adjust as needed to leave some space for other content */
+    margin: auto; /* This helps center the video in the flex container */
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;      /* Remove default background */
+    border: none;          /* Remove default border */
+    font-family: var(--fontfam);   /* Set font family */
+    font-size: var(--buttonSize);       /* Set font size */
+    cursor: pointer;       /* Change cursor on hover */
+    outline: none;         /* Remove focus outline */
+    color: #000;           /* Set button text color, adjust as needed */
+    font-weight: bold;
+}
+
+button:hover {
+    color: var(--hoverColor);
+}
+
+button:first-of-type {
+    left: 10px;           /* Position "Prev" button to the leftmost side */
+}
+
+button:last-of-type {
+    right: 10px;          /* Position "Next" button to the rightmost side */
+}
+
+.video-description {
+    font-family: var(--fontfam);
+    margin-top: 0px;   /* Adjust the margin as per your design */
+    /* text-align: center; */
+    padding: 0px;      /* Provides some space around the text */
+    max-width: 50%;     /* Ensures the description does not span the full width of its container, making it easier to read. Adjust as needed. */
+    margin-left: auto;
+    margin-right: auto;
+}
