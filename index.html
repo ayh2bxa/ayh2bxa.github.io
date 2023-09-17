@@ -10,10 +10,26 @@
   </script>
 </head>
 <body>
-  <p class="common">
-    I'm a <a href="https://projectfmusic.com/" target="_blank">producer</a> and <a href="https://www.ece.cmu.edu/" target="_blank">engineer</a> seeking opportunities in the audio DSP industry. <br>
-    My interest in electronic music motivates me to explore the intersection between sonic arts and real-time audio processing. My coursework spans DSP, machine learning, acoustics, computer systems, and music production. <br>
-    Hands-on experience through hobby projects, internships, teaching.
-  </p>
+  <div class="project" id="project2">
+    <h1>Filter-dependent point cloud audio visualisation</h1>
+    <p class="video-description">This audio visualisation work features a filter, that controls granularity of point cloud. You can draw the filter shape arbitrarily with your mouse. The more low-frequency content the filter preserves, the larger an individual point. The music used is an excerpt from my single <a href="https://www.youtube.com/watch?v=fVlBo7j8zts" target="_blank">"20 Dreams"</a>, and the photo used for the visualisation is taken by myself.</p>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/dYJhLMRZFKc?si=BGl5kQK6XRSS9kEt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <div class="project" id="project1">
+    <h1>Transformer voice effect</h1>
+    <p class="video-description">Inspired by <a href="https://www.youtube.com/watch?v=2_l7P5Aq7gI" target="_blank">this tutorial</a>, I wrote a real-time C++ program to emulate the deep robotic voices of the Transformers. The samples used are chosen from FL Studio's built-in sample packs. The GUI is developed under the JUCE framework, the FFT function is developed by <a href="https://github.com/Signalsmith-Audio/fft/blob/main/signalsmith-fft.h" target="_blank">Signalsmith</a>, but all the remaining DSP algorithms and real-time optimisations are written by myself from scratch.</p>
+    <video width="640" height="360" controls>
+        <source src="video-demos/transformer-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="nav-buttons">
+    <button onclick="navigate(-1); stopVideoPlayback();"><< Prev</button>
+    <button onclick="navigate(1); stopVideoPlayback();">Next >></button>
+  </div>
+  <!-- </div> -->
+
+<script src="script.js"></script>
 </body>
 </html>

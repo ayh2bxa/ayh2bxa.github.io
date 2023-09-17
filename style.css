@@ -2,8 +2,9 @@
     --cfont: 16px;
     --fontfam: monospace;
     --textmar: 40px;
-    --hoverColor: #b60000;
+    --hoverColor: #cf0000;
     --buttonSize:24px;
+    --bgc: white;
 }
 
 html {
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: var(--bgc);
     position: relative;
     margin: var(--textmar);
     padding: 0px;
@@ -48,7 +49,7 @@ ul li a {
 }
 
 h1 {
-    font-size: var(--cfont);
+    font-size: 18px;
     font-family: var(--fontfam);
     color: #000000;
     padding: 10px 20px;
@@ -68,7 +69,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ffffff; /* adding a background color to ensure the content below doesn't show through */
+    background-color: var(--bgc); /* adding a background color to ensure the content below doesn't show through */
     z-index: 100; /* ensures the navbar stays above other content */
 }
 
@@ -83,23 +84,13 @@ body {
     line-height: 1.5em;
 }
 
-.wavy-underline {
-    text-decoration: none; /* Remove default underline */
-    display: inline-block; /* Allows the background to work as expected */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M 0 10 Q 5 0 10 10" fill="transparent" stroke="red" stroke-width="1.5"/></svg>');
-    background-repeat: repeat-x;
-    background-position: 0% 100%; /* Position at the bottom of the text */
-    background-size: 5px 5px; /* Adjust size as needed */
-    padding-bottom: 2px; /* Create space for the wavy underline */
-}
-
 body {
     display: flex;
     height: 100vh;
 }
 
 video, iframe {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 10px rgb(81, 31, 31);
     border-radius: 8px;
     max-width: 100%; /* This ensures the video doesn't overflow its container */
     max-height: 80%; /* Adjust as needed to leave some space for other content */
@@ -137,9 +128,35 @@ button:last-of-type {
 .video-description {
     font-family: var(--fontfam);
     margin-top: 0px;   /* Adjust the margin as per your design */
-    /* text-align: center; */
-    padding: 0px;      /* Provides some space around the text */
+    text-align: justify;
+    padding-bottom: 60px;      /* Provides some space around the text */
     max-width: 50%;     /* Ensures the description does not span the full width of its container, making it easier to read. Adjust as needed. */
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 450px;
+    margin-right: 450px;
+    font-size: var(--cfont);
+}
+
+.video-container {
+    display: flex;
+    align-items: center; /* Vertically aligns the video and buttons in the middle */
+    justify-content: center; /* Horizontally centers the items */
+    gap: 10px; /* Adjust this value for spacing between video and buttons */
+}
+
+.nav-buttons {
+    display: flex;
+    text-align: center;
+}
+
+.nav-buttons button {
+    margin-left: 300px;
+    margin-right: 300px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: inherit;  /* Keeps the text color unchanged */
 }
