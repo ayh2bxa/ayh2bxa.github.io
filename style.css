@@ -1,6 +1,6 @@
 :root {
     --cfont: 16px;
-    --fontfam: sans-serif;
+    --fontfam: monospace;
     --textmar: 40px;
     --hoverColor: #b60000;
     --buttonSize:24px;
@@ -82,6 +82,7 @@ body {
     width: calc(100% - 300px);
     line-height: 1.5em;
 }
+
 .wavy-underline {
     text-decoration: none; /* Remove default underline */
     display: inline-block; /* Allows the background to work as expected */
