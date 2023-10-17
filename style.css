@@ -93,7 +93,7 @@ video, iframe {
     box-shadow: 4px 4px 10px rgb(81, 31, 31);
     border-radius: 8px;
     max-width: 100%; /* This ensures the video doesn't overflow its container */
-    max-height: 80%; /* Adjust as needed to leave some space for other content */
+    max-height: 95%; /* Adjust as needed to leave some space for other content */
     margin: auto; /* This helps center the video in the flex container */
     display: block;
     margin: 0 auto;

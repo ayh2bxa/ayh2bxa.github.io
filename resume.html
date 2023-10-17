@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; overflow-y: auto;">
+
 <head>
-    <div id="navbar"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(function(){
+        $(function() {
             $("#navbar").load("navbar.html");
         });
     </script>
 </head>
-<body>
 
-<!-- Navbar Placeholder -->
-<div id="navbar"></div>
-
-<!-- PDF Viewer Section -->
-<iframe src="CV.pdf" width="60%" height="1000px" style="display:block; margin:auto;"></iframe>
-
-<!-- If you still want the link to download the PDF, you can keep this section -->
-<!-- <p class="common">
-    <a href="CV.pdf">Download as PDF</a>
-</p> -->
-
+<body style="height: 100%; overflow-y: auto;">
+    <div id="navbar"></div>
+    <iframe src="CV.pdf" width="40%" height="2000px" style="display:block; margin:auto; margin-top: 20px;"></iframe>
 </body>
+
 </html>
