@@ -1,5 +1,5 @@
 let currentProject = 1;
-const totalProjects = 2;  // Modify this based on the number of projects you have
+const totalProjects = 3;  // Modify this based on the number of projects you have
 
 function navigate(direction) {
     // Hide the current project
